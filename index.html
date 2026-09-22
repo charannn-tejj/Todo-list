@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome CDN for modern icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Sidebar -->
@@ -34,19 +38,24 @@
                 <div class="nav-label">Views</div>
                 <ul class="nav-list">
                     <li class="nav-item active" data-filter="all">
-                        <a href="#"><i class="fa-solid fa-list-check"></i> All Tasks <span class="badge" id="countAll">0</span></a>
+                        <a href="#"><i class="fa-solid fa-list-check"></i> All Tasks <span class="badge"
+                                id="countAll">0</span></a>
                     </li>
                     <li class="nav-item" data-filter="today">
-                        <a href="#"><i class="fa-solid fa-calendar-day"></i> Today <span class="badge" id="countToday">0</span></a>
+                        <a href="#"><i class="fa-solid fa-calendar-day"></i> Today <span class="badge"
+                                id="countToday">0</span></a>
                     </li>
                     <li class="nav-item" data-filter="upcoming">
-                        <a href="#"><i class="fa-solid fa-calendar-week"></i> Upcoming <span class="badge" id="countUpcoming">0</span></a>
+                        <a href="#"><i class="fa-solid fa-calendar-week"></i> Upcoming <span class="badge"
+                                id="countUpcoming">0</span></a>
                     </li>
                     <li class="nav-item" data-filter="high-priority">
-                        <a href="#"><i class="fa-solid fa-triangle-exclamation"></i> High Priority <span class="badge badge-warning" id="countHighPriority">0</span></a>
+                        <a href="#"><i class="fa-solid fa-triangle-exclamation"></i> High Priority <span
+                                class="badge badge-warning" id="countHighPriority">0</span></a>
                     </li>
                     <li class="nav-item" data-filter="completed">
-                        <a href="#"><i class="fa-solid fa-circle-check"></i> Completed <span class="badge" id="countCompleted">0</span></a>
+                        <a href="#"><i class="fa-solid fa-circle-check"></i> Completed <span class="badge"
+                                id="countCompleted">0</span></a>
                     </li>
                 </ul>
             </nav>
@@ -69,9 +78,12 @@
                     <span>Saved to LocalStorage</span>
                 </div>
                 <div class="footer-actions">
-                    <button class="btn-text-sm" id="exportDataBtn" title="Export Tasks to JSON"><i class="fa-solid fa-download"></i> Export</button>
-                    <button class="btn-text-sm" id="importDataBtn" title="Import Tasks from JSON"><i class="fa-solid fa-upload"></i> Import</button>
-                    <button class="btn-text-sm text-danger" id="resetDemoBtn" title="Reset to Sample Data"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                    <button class="btn-text-sm" id="exportDataBtn" title="Export Tasks to JSON"><i
+                            class="fa-solid fa-download"></i> Export</button>
+                    <button class="btn-text-sm" id="importDataBtn" title="Import Tasks from JSON"><i
+                            class="fa-solid fa-upload"></i> Import</button>
+                    <button class="btn-text-sm text-danger" id="resetDemoBtn" title="Reset to Sample Data"><i
+                            class="fa-solid fa-rotate-left"></i> Reset</button>
                 </div>
                 <input type="file" id="importFileInput" accept=".json" style="display: none;">
             </div>
@@ -254,10 +266,11 @@
             </div>
             <form id="taskForm">
                 <input type="hidden" id="taskId">
-                
+
                 <div class="form-group">
                     <label for="taskTitleInput">Task Title <span class="text-danger">*</span></label>
-                    <input type="text" id="taskTitleInput" class="form-control" placeholder="e.g. Implement user authentication UI" required>
+                    <input type="text" id="taskTitleInput" class="form-control"
+                        placeholder="e.g. Implement user authentication UI" required>
                 </div>
 
                 <div class="form-row">
@@ -298,15 +311,18 @@
 
                 <div class="form-group">
                     <label for="taskDescInput">Description</label>
-                    <textarea id="taskDescInput" class="form-control" rows="3" placeholder="Add detailed notes, acceptance criteria, or context..."></textarea>
+                    <textarea id="taskDescInput" class="form-control" rows="3"
+                        placeholder="Add detailed notes, acceptance criteria, or context..."></textarea>
                 </div>
 
                 <!-- Subtasks Builder -->
                 <div class="form-group">
                     <label><i class="fa-solid fa-list-ul"></i> Subtasks Checklist</label>
                     <div class="subtask-input-wrapper">
-                        <input type="text" id="newSubtaskInput" class="form-control" placeholder="Add a subtask step and press Enter or Add...">
-                        <button type="button" class="btn btn-secondary" id="addSubtaskBtn"><i class="fa-solid fa-plus"></i> Add</button>
+                        <input type="text" id="newSubtaskInput" class="form-control"
+                            placeholder="Add a subtask step and press Enter or Add...">
+                        <button type="button" class="btn btn-secondary" id="addSubtaskBtn"><i
+                                class="fa-solid fa-plus"></i> Add</button>
                     </div>
                     <ul class="subtasks-editor-list" id="subtasksEditorList">
                         <!-- Dynamic subtask editor items -->
@@ -333,7 +349,8 @@
             <form id="projectForm">
                 <div class="form-group">
                     <label for="projectNameInput">Project Name <span class="text-danger">*</span></label>
-                    <input type="text" id="projectNameInput" class="form-control" placeholder="e.g. Website Redesign" required>
+                    <input type="text" id="projectNameInput" class="form-control" placeholder="e.g. Website Redesign"
+                        required>
                 </div>
 
                 <div class="form-group">
@@ -352,7 +369,8 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="cancelProjectModalBtn">Cancel</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Create Project</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Create
+                        Project</button>
                 </div>
             </form>
         </div>
@@ -360,4 +378,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
